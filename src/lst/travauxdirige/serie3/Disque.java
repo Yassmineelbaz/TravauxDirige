@@ -4,7 +4,7 @@ class Disque extends Figure {
     private Point centre;
     private double rayon;
 
-    // Constructeurs de la classe Disque
+ 
     public Disque() {
         super("Disque");
         this.centre = new Point(0, 0);
@@ -23,7 +23,7 @@ class Disque extends Figure {
         this.rayon = rayon;
     }
 
-    // Accesseurs et mutateurs pour les attributs de Disque
+    
     public Point getCentre() {
         return centre;
     }
@@ -40,7 +40,7 @@ class Disque extends Figure {
         this.rayon = rayon;
     }
 
-    // Implémentation des méthodes abstraites de la classe Figure
+    
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * rayon;
@@ -51,7 +51,7 @@ class Disque extends Figure {
         return Math.PI * rayon * rayon;
     }
 
-    // Méthode toString pour afficher une représentation du Disque
+    
     @Override
     public String toString() {
         return super.toString() + ", Centre : " + centre + ", Rayon : " + rayon;
