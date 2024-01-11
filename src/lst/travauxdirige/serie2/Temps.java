@@ -2,47 +2,40 @@ package lst.travauxdirige.serie2;
 
 public class Temps {
 
-        // Attributs de la classe
         private int heures;
         private int minutes;
         private int secondes;
 
-        // Constructeur par défaut
         public Temps() {
             this.heures = 0;
             this.minutes = 0;
             this.secondes = 0;
         }
 
-        // Constructeur avec heures
         public Temps(int heures) {
             this.heures = heures;
             this.minutes = 0;
             this.secondes = 0;
         }
 
-        // Constructeur avec heures et minutes
         public Temps(int heures, int minutes) {
             this.heures = heures;
             this.minutes = minutes;
             this.secondes = 0;
         }
 
-        // Constructeur avec heures, minutes et secondes
         public Temps(int heures, int minutes, int secondes) {
             this.heures = heures;
             this.minutes = minutes;
             this.secondes = secondes;
         }
 
-        // Constructeur de copie
         public Temps(Temps temps) {
             this.heures = temps.heures;
             this.minutes = temps.minutes;
             this.secondes = temps.secondes;
         }
 
-        // Accesseurs et mutateurs pour tous les attributs
         public int getHeures() {
             return heures;
         }
@@ -79,7 +72,6 @@ public class Temps {
             }
         }
 
-        // Méthodes pour ajouter des heures, minutes et secondes
         public void ajouterHeures(int heures) {
             this.heures = (this.heures + heures) % 24;
         }
@@ -97,7 +89,6 @@ public class Temps {
             this.secondes = totalSecondes % 60;
         }
 
-        // Méthode toString pour afficher une représentation de la classe Temps
         @Override
         public String toString() {
             return String.format("%02d:%02d:%02d", heures, minutes, secondes);
