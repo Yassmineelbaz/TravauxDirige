@@ -5,24 +5,20 @@ public class ValeurMaxMin {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
 
-            // Demander à l'utilisateur de saisir la taille du tableau
             System.out.print("Entrez la taille du tableau (entre 10 et 50) : ");
             int taille = scanner.nextInt();
 
-            // Valider la taille du tableau
             if (taille < 10 || taille > 50) {
                 System.out.println("La taille du tableau doit être entre 10 et 50.");
                 return;
             }
 
-            // Créer le tableau et remplir avec les entiers saisis par l'utilisateur
             int[] tableau = new int[taille];
             for (int i = 0; i < taille; i++) {
                 System.out.print("Entrez l'élément à l'indice " + i + " : ");
                 tableau[i] = scanner.nextInt();
             }
 
-            // Déterminer et afficher la valeur maximale et la valeur minimale
             int valeurMax = trouverValeurMaximale(tableau);
             int valeurMin = trouverValeurMinimale(tableau);
 
