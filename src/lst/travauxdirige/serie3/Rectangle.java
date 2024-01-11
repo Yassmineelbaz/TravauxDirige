@@ -4,7 +4,6 @@ class Rectangle extends Figure {
     private double longueur;
     private double largeur;
 
-    // Constructeurs de la classe Rectangle
     public Rectangle() {
         super("Rectangle");
         this.longueur = 1.0;
@@ -23,7 +22,6 @@ class Rectangle extends Figure {
         this.largeur = largeur;
     }
 
-    // Accesseurs et mutateurs pour les attributs de Rectangle
     public double getLongueur() {
         return longueur;
     }
@@ -40,7 +38,6 @@ class Rectangle extends Figure {
         this.largeur = largeur;
     }
 
-    // Implémentation des méthodes abstraites de la classe Figure
     @Override
     public double getPerimeter() {
         return 2 * (longueur + largeur);
@@ -51,7 +48,6 @@ class Rectangle extends Figure {
         return longueur * largeur;
     }
 
-    // Méthode toString pour afficher une représentation du Rectangle
     @Override
     public String toString() {
         return super.toString() + ", Longueur : " + longueur + ", Largeur : " + largeur;
