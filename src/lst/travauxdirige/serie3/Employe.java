@@ -4,7 +4,7 @@ abstract class Employe {
     protected String nom;
     protected String prenom;
 
-    // Constructeurs de la classe Employe
+   
     public Employe() {
         this.nom = "Inconnu";
         this.prenom = "Inconnu";
@@ -15,7 +15,7 @@ abstract class Employe {
         this.prenom = prenom;
     }
 
-    // Accesseurs et mutateurs pour les attributs de Employe
+   
     public String getNom() {
         return nom;
     }
@@ -32,20 +32,20 @@ abstract class Employe {
         this.prenom = prenom;
     }
 
-    // Méthode toString pour afficher une représentation de l'employé
+    
     @Override
     public String toString() {
         return "Employé - Nom : " + nom + ", Prénom : " + prenom;
     }
 
-    // Méthode abstraite pour le salaire
+    
     public abstract double gains();
 }
 
 class Patron extends Employe {
     private double salaire;
 
-    // Constructeurs de la classe Patron
+    
     public Patron() {
         super();
         this.salaire = 0.0;
@@ -56,7 +56,7 @@ class Patron extends Employe {
         this.salaire = salaire;
     }
 
-    // Accesseurs et mutateurs pour les attributs de Patron
+    
     public double getSalaire() {
         return salaire;
     }
@@ -65,13 +65,13 @@ class Patron extends Employe {
         this.salaire = salaire;
     }
 
-    // Implémentation de la méthode gains pour le salaire du patron
+    
     @Override
     public double gains() {
         return salaire;
     }
 
-    // Méthode toString pour afficher une représentation du patron
+    
     @Override
     public String toString() {
         return super.toString() + ", Salaire : " + salaire;
@@ -98,7 +98,7 @@ class TravailleurCommission extends Employe {
         this.quantite = 0;
     }
 
-    // Accesseurs et mutateurs pour les attributs de TravailleurCommission
+    
     public double getSalaire() {
         return salaire;
     }
@@ -123,13 +123,13 @@ class TravailleurCommission extends Employe {
         this.quantite = quantite;
     }
 
-    // Implémentation de la méthode gains pour le salaire du travailleur à la commission
+   
     @Override
     public double gains() {
         return salaire + commission * quantite;
     }
 
-    // Méthode toString pour afficher une représentation du travailleur à la commission
+    
     @Override
     public String toString() {
         return super.toString() + ", Salaire : " + salaire + ", Commission : " + commission + ", Quantité : " + quantite;
