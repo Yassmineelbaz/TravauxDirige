@@ -1,13 +1,11 @@
 package lst.travauxdirige.serie2;
 
 public class Livre {
-        // Attributs de la classe
         private String titre;
         private String auteur;
         private double prix;
         private int annee;
 
-        // Constructeur par défaut
         public Livre() {
             this.titre = "";
             this.auteur = "";
@@ -15,7 +13,6 @@ public class Livre {
             this.annee = 0;
         }
 
-        // Constructeur avec titre
         public Livre(String titre) {
             this.titre = titre;
             this.auteur = "";
@@ -23,7 +20,6 @@ public class Livre {
             this.annee = 0;
         }
 
-        // Constructeur avec titre et auteur
         public Livre(String titre, String auteur) {
             this.titre = titre;
             this.auteur = auteur;
@@ -31,7 +27,6 @@ public class Livre {
             this.annee = 0;
         }
 
-        // Constructeur avec titre, auteur et prix
         public Livre(String titre, String auteur, double prix) {
             this.titre = titre;
             this.auteur = auteur;
@@ -39,7 +34,6 @@ public class Livre {
             this.annee = 0;
         }
 
-        // Constructeur avec titre, auteur, prix et annee
         public Livre(String titre, String auteur, double prix, int annee) {
             this.titre = titre;
             this.auteur = auteur;
@@ -47,7 +41,6 @@ public class Livre {
             this.annee = annee;
         }
 
-        // Constructeur de copie
         public Livre(Livre livre) {
             this.titre = livre.titre;
             this.auteur = livre.auteur;
@@ -55,7 +48,6 @@ public class Livre {
             this.annee = livre.annee;
         }
 
-        // Accesseurs et mutateurs pour tous les attributs
         public String getTitre() {
             return titre;
         }
@@ -88,7 +80,6 @@ public class Livre {
             this.annee = annee;
         }
 
-        // Méthode toString pour afficher une représentation de la classe Livre
         @Override
         public String toString() {
             return "Livre [titre=" + titre + ", auteur=" + auteur + ", prix=" + prix + ", annee=" + annee + "]";
