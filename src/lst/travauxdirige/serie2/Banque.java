@@ -2,19 +2,16 @@ package lst.travauxdirige.serie2;
 
 public class Banque {
 
-        // Attributs de la classe
         private int Ncompte;
         private float solde;
         private String CIN;
 
-        // Constructeur
         public Banque(int Ncompte, float solde, String CIN) {
             this.Ncompte = Ncompte;
             this.solde = solde;
             this.CIN = CIN;
         }
 
-        // Méthode pour déposer de l'argent
         public void deposer(float somme) {
             if (somme > 0) {
                 solde += somme;
@@ -24,7 +21,6 @@ public class Banque {
             }
         }
 
-        // Méthode pour retirer de l'argent
         public void retirer(float somme) {
             if (somme > 0 && somme <= solde) {
                 solde -= somme;
@@ -34,12 +30,10 @@ public class Banque {
             }
         }
 
-        // Méthode pour obtenir le solde du compte
         public float avoirSolde() {
             return solde;
         }
 
-        // Méthode pour obtenir les informations du compte
         public void avoirInf() {
             System.out.println("Informations du compte - Ncompte: " + Ncompte + ", Solde: " + solde + ", CIN: " + CIN);
         }
