@@ -4,20 +4,15 @@ public class SommeMatrice {
         public static void main(String[] args) {
             Scanner scanner = new Scanner(System.in);
 
-            // Demander à l'utilisateur de saisir la taille des matrices carrées
             System.out.print("Entrez la taille des matrices carrées (par exemple, 2 pour une matrice 2x2) : ");
             int taille = scanner.nextInt();
 
-            // Saisir la première matrice
             double[][] matrice1 = saisirMatrice("Matrice 1", taille);
 
-            // Saisir la deuxième matrice
             double[][] matrice2 = saisirMatrice("Matrice 2", taille);
 
-            // Calculer la somme des matrices
             double[][] somme = additionnerMatrices(matrice1, matrice2);
 
-            // Afficher les matrices et leur somme
             afficherMatrice("Matrice 1", matrice1);
             afficherMatrice("Matrice 2", matrice2);
             afficherMatrice("Somme", somme);
