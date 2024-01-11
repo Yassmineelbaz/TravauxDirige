@@ -9,13 +9,13 @@ public class Employee {
         String toString();
     }
 
-    // Classe Patron implémentant l'interface Employe
+    
     class Patron implements Employe {
         private String nom;
         private String prenom;
         private double salaire;
 
-        // Constructeurs de la classe Patron
+       
         public Patron() {
             this.nom = "Inconnu";
             this.prenom = "Inconnu";
@@ -28,7 +28,7 @@ public class Employee {
             this.salaire = salaire;
         }
 
-        // Accesseurs et mutateurs pour les attributs de Patron
+        
         public String getNom() {
             return nom;
         }
@@ -45,18 +45,18 @@ public class Employee {
             this.salaire = salaire;
         }
 
-        // Implémentation de la méthode gains pour le salaire du patron
+      
         public double gains() {
             return salaire;
         }
 
-        // Méthode toString pour afficher une représentation du patron
+       
         public String toString() {
             return "Patron - Nom : " + nom + ", Prénom : " + prenom + ", Salaire : " + salaire;
         }
     }
 
-    // Classe TravailleurCommission implémentant l'interface Employe
+    
     class TravailleurCommission implements Employe {
         private String nom;
         private String prenom;
@@ -64,7 +64,7 @@ public class Employee {
         private double commission;
         private int quantite;
 
-        // Constructeurs de la classe TravailleurCommission
+        
         public TravailleurCommission() {
             this.nom = "Inconnu";
             this.prenom = "Inconnu";
@@ -81,7 +81,7 @@ public class Employee {
             this.quantite = 0;
         }
 
-        // Accesseurs et mutateurs pour les attributs de TravailleurCommission
+        
         public String getNom() {
             return nom;
         }
@@ -114,26 +114,26 @@ public class Employee {
             this.quantite = quantite;
         }
 
-        // Implémentation de la méthode gains pour le salaire du travailleur à la commission
+       
         public double gains() {
             return salaire + commission * quantite;
         }
 
-        // Méthode toString pour afficher une représentation du travailleur à la commission
+        
         public String toString() {
             return "TravailleurCommission - Nom : " + nom + ", Prénom : " + prenom +
                     ", Salaire : " + salaire + ", Commission : " + commission + ", Quantité : " + quantite;
         }
     }
 
-    // Classe TravailleurHoraire implémentant l'interface Employe
+   
     class TravailleurHoraire implements Employe {
         private String nom;
         private String prenom;
         private double retribution;
         private double heures;
 
-        // Constructeurs de la classe TravailleurHoraire
+        
         public TravailleurHoraire() {
             this.nom = "Inconnu";
             this.prenom = "Inconnu";
@@ -148,7 +148,7 @@ public class Employee {
             this.heures = 0.0;
         }
 
-        // Accesseurs et mutateurs pour les attributs de TravailleurHoraire
+        
         public String getNom() {
             return nom;
         }
@@ -173,33 +173,33 @@ public class Employee {
             this.heures = heures;
         }
 
-        // Implémentation de la méthode gains pour le salaire du travailleur horaire
+        
         public double gains() {
             return retribution * heures;
         }
 
-        // Méthode toString pour afficher une représentation du travailleur horaire
+        
         public String toString() {
             return "TravailleurHoraire - Nom : " + nom + ", Prénom : " + prenom +
                     ", Rémunération horaire : " + retribution + ", Heures : " + heures;
         }
     }
 
-    // Classe de test TestEmploye
+  
     public class TestEmploye {
         public void main(String[] args) {
-            // Test de la classe Patron
+           
             Employe patron = new Patron("Dupont", "Jean", 5000.0);
             System.out.println(patron);
             System.out.println("Salaire du patron : " + patron.gains());
 
-            // Test de la classe TravailleurCommission
+           
             Employe travailleurCommission = new TravailleurCommission("Martin", "Alice", 1000.0, 0.05);
             ((TravailleurCommission) travailleurCommission).setQuantite(200);
             System.out.println("\n" + travailleurCommission);
             System.out.println("Salaire du travailleur à la commission : " + travailleurCommission.gains());
 
-            // Test de la classe TravailleurHoraire
+            
             Employe travailleurHoraire = new TravailleurHoraire("Dubois", "Paul", 15.0);
             ((TravailleurHoraire) travailleurHoraire).setHeures(40);
             System.out.println("\n" + travailleurHoraire);
